@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				perspective: 1000px;
+				background: #000;
+			}
+
+			@keyframes rot {
+				0% {
+				}
+
+				100% {
+					transform: rotate3d(0, 1, 0, 360deg);
+				}
+			}
+
+			.fat {
+				margin: 200px auto;
+				width: 300px;
+				height: 200px;
+				transform-style: preserve-3d;
+				transform: rotateX(-30deg);
+			}
+
+			.box {
+				position: relative;
+				width: 300px;
+				height: 200px;
+				margin: 200px auto;
+
+				transform-style: preserve-3d;
+				animation: rot 10s linear infinite;
+			}
+
+			.box:hover {
+				animation-play-state: paused;
+			}
+
+			.box img {
+				width: 300px;
+				height: 200px;
+				object-fit: cover;
+			}
+
+			.box div[class^="t"] {
+				position: absolute;
+				left: 50%;
+				margin-left: -75px;
+
+				/* transform: translate(-50%); */
+			}
+
+			.box div[class^="t"] img {
+				width: 150px;
+				height: 100px;
+			}
+
+			.box div {
+				position: absolute;
+				left: 0;
+				top: 100px;
+				-webkit-box-reflect: below 10px -webkit-linear-gradient(transparent 30%, rgba(255, 255, 255, 0.3));
+			}
+
+			.p1 {
+				transform: translateZ(300px);
+			}
+
+			.p2 {
+				transform: rotateY(60deg) translateZ(300px);
+			}
+
+			.p3 {
+				transform: rotateY(120deg) translateZ(300px);
+			}
+
+			.p4 {
+				transform: rotateY(180deg) translateZ(300px);
+			}
+
+			.p5 {
+				transform: rotateY(240deg) translateZ(300px);
+			}
+
+			.p6 {
+				transform: rotateY(300deg) translateZ(300px);
+			}
+
+			.t1 {
+				transform: rotateY(0deg) translateZ(200px);
+			}
+
+			.t2 {
+				transform: rotateY(60deg) translateZ(200px);
+			}
+
+			.t3 {
+				transform: rotateY(120deg) translateZ(200px);
+			}
+
+			.t4 {
+				transform: rotateY(180deg) translateZ(200px);
+			}
+
+			.t5 {
+				transform: rotateY(240deg) translateZ(200px);
+			}
+
+			.t6 {
+				transform: rotateY(300deg) translateZ(200px);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="fat">
+			<div class="box">
+				<div class="p1"><img src="./image/3.jpg" alt="" /></div>
+				<div class="p2"><img src="./image/4.jpg" alt="" /></div>
+				<div class="p3"><img src="./image/5.jpg" alt="" /></div>
+				<div class="p4"><img src="./image/6.jpg" alt="" /></div>
+				<div class="p5"><img src="./image/7.jpg" alt="" /></div>
+				<div class="p6"><img src="./image/8.jpg" alt="" /></div>
+				<div class="t1"><img src="./image/3.jpg" alt="" /></div>
+				<div class="t2"><img src="./image/4.jpg" alt="" /></div>
+				<div class="t3"><img src="./image/5.jpg" alt="" /></div>
+				<div class="t4"><img src="./image/6.jpg" alt="" /></div>
+				<div class="t5"><img src="./image/7.jpg" alt="" /></div>
+				<div class="t6"><img src="./image/8.jpg" alt="" /></div>
+			</div>
+		</div>
+	</body>
+</html>
